@@ -113,7 +113,7 @@ export default function InstantQuotePage() {
               className="text-4xl sm:text-5xl font-black text-white mb-4 leading-tight"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              Get Y TESTIING 
+              Get Y TESTIING SCRIPT
             </h1>
             <p
               className="text-blue-200 text-lg"
