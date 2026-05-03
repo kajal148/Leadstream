@@ -124,9 +124,31 @@ export default function InstantQuotePage() {
           </div>
         </section>
 
-            <div>
+            {/* <div>
                 <LeadStreamEmbed />
-              </div>
+              </div> */}
+
+              <div>
+        <Script
+          src="https://app.getleadstream.com/embed/S0NZS2Fpczg="
+          strategy="afterInteractive"
+          onLoad={() => {
+            const container = document.getElementById('leadstream_container');
+            if (container && !container.querySelector('iframe')) {
+              const iframe = document.createElement('iframe');
+              iframe.src = 'https://app.getleadstream.com/KCYKais8/flows';
+              iframe.scrolling = 'yes';
+              iframe.frameBorder = 0;
+              iframe.style.overflow = 'auto';
+              iframe.style.webkitOverflowScrolling = 'touch';
+              iframe.style.border = 'none';
+              iframe.style.width = '100%';
+              iframe.style.height = '500px';
+              container.appendChild(iframe);
+            }
+          }}
+        />
+      </div>
 
 
         {/* ── Why Book Online ───────────────────────────────── */}
