@@ -132,21 +132,35 @@ export default function InstantQuotePage() {
         <Script
           src="https://app.getleadstream.com/embed/S0NZS2Fpczg="
           strategy="afterInteractive"
-          onLoad={() => {
-            const container = document.getElementById('leadstream_container');
-            if (container && !container.querySelector('iframe')) {
-              const iframe = document.createElement('iframe');
-              iframe.src = 'https://app.getleadstream.com/KCYKais8/flows';
-              iframe.scrolling = 'yes';
-              iframe.frameBorder = 0;
-              iframe.style.overflow = 'auto';
-              iframe.style.webkitOverflowScrolling = 'touch';
-              iframe.style.border = 'none';
-              iframe.style.width = '100%';
-              iframe.style.height = '500px';
-              container.appendChild(iframe);
-            }
-          }}
+          // onLoad={() => {
+          //   const container = document.getElementById("leadstream_container");
+          //   if (!container) return;
+          //   container.innerHTML = "";
+          //   const iframe = document.createElement("iframe");
+          //   iframe.src = "https://www.app.getleadstream.com/KCYKais8/flows";
+          //   iframe.style.width = "100%";
+          //   iframe.style.height = "600px";
+          //   iframe.style.border = "none";
+          //   iframe.style.borderRadius = "8px";
+          //   iframe.title = "LeadStream Quote Form";
+          //   iframe.loading = "lazy";
+          //   container.appendChild(iframe);
+          //   window.addEventListener("message", (e) => {
+          //     if (!e.origin.match("app.getleadstream.com")) return;
+          //     const data = e.data;
+          //     if (data?.height && typeof data.height === "number") {
+          //       iframe.style.height = `${data.height}px`;
+          //     }
+          //     if (data?.event || data?.type) {
+          //       (window as any).dataLayer = (window as any).dataLayer || [];
+          //       (window as any).dataLayer.push({
+          //         event: "leadstream.quote_generated",
+          //         leadstream_event: data.type || data.event,
+          //         leadstream_data: data,
+          //       });
+          //     }
+          //   });
+          // }}
         />
       </div>
 
